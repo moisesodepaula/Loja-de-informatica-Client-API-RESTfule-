@@ -1,0 +1,3 @@
+1-Dentro da pasta abra o terminal
+2-Execute o codigo abaixo:
+'py -m http.server 8000'

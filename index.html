@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loja de Informática - Produtos de tecnologia com os melhores preços.">
+    <meta name="keywords" content="informática, loja, produtos, tecnologia, computador">
+    <meta name="author" content="Sua Empresa">
+    <title>Loja de Informática</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Loja de Informática</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="mostrarSecao('produtos')" aria-label="Ver Produtos">Produtos</a></li>
+                <li><a href="#" onclick="mostrarSecao('adicionar-produto')" aria-label="Adicionar Produto">Adicionar Produto</a></li>
+                <li><a href="#" onclick="mostrarSecao('atualizar-produto')" aria-label="Atualizar Produto">Atualizar Produto</a></li>
+                <li><a href="#" onclick="mostrarSecao('deletar-produto')" aria-label="Deletar Produto">Deletar Produto</a></li>
+                <li><a href="#" onclick="logout()" aria-label="Logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login">
+            <h2>Login</h2>
+            <form id="login-form" action="javascript:void(0);">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" placeholder="Usuário" aria-labelledby="username" required>
+                
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Senha" aria-labelledby="password" required>
+                
+                <button onclick="login()">Login</button>
+            </form>
+        </section>
+
+        <section id="produtos" style="display: none;">
+            <h2>Produtos</h2>
+            <ul id="lista-produtos"></ul>
+        </section>
+
+        <section id="adicionar-produto" style="display: none;">
+            <h2>Adicionar Produto</h2>
+            <form id="adicionar-form">
+                <label for="nome">Nome do Produto</label>
+                <input type="text" id="nome" placeholder="Nome do Produto" required>
+                
+                <label for="preco">Preço</label>
+                <input type="number" id="preco" placeholder="Preço" required>
+                
+                <label for="categoria">Categoria</label>
+                <input type="text" id="categoria" placeholder="Categoria" required>
+                
+                <label for="estoque">Estoque</label>
+                <input type="number" id="estoque" placeholder="Estoque" required>
+                
+                <button type="submit" onclick="criarProduto()">Criar Produto</button>
+            </form>
+        </section>
+
+        <section id="atualizar-produto" style="display: none;">
+            <h2>Atualizar Produto</h2>
+            <form id="atualizar-form">
+                <label for="atualizar-id">ID do Produto</label>
+                <input type="number" id="atualizar-id" placeholder="ID do Produto" readonly required>
+                
+                <label for="novo-nome">Novo Nome do Produto</label>
+                <input type="text" id="novo-nome" placeholder="Novo Nome do Produto">
+                
+                <label for="novo-preco">Novo Preço</label>
+                <input type="number" id="novo-preco" placeholder="Novo Preço">
+                
+                <label for="nova-categoria">Nova Categoria</label>
+                <input type="text" id="nova-categoria" placeholder="Nova Categoria">
+                
+                <label for="novo-estoque">Novo Estoque</label>
+                <input type="number" id="novo-estoque" placeholder="Novo Estoque">
+                
+                <button type="submit" onclick="atualizarProduto()">Atualizar Produto</button>
+            </form>
+        </section>
+
+        <section id="deletar-produto" style="display: none;">
+            <h2>Deletar Produto</h2>
+            <form id="deletar-form">
+                <label for="deletar-id">ID do Produto</label>
+                <input type="number" id="deletar-id" placeholder="ID do Produto" required>
+                <button type="submit" onclick="excluirProduto()">Deletar Produto</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Loja de Informática. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

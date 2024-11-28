@@ -1,0 +1,97 @@
+:root {
+    --cor-fundo: #f4f4f4;
+    --cor-principal: #333;
+    --cor-accento: #555;
+    --cor-texto: #333;
+    --caixa-sombra: rgba(0, 0, 0, 0.1);
+    --botao-hover: #555;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: var(--cor-principal);
+    color: #fff;
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px var(--caixa-sombra);
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--caixa-sombra);
+}
+
+h2 {
+    color: var(--cor-texto);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+input, button {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--cor-principal);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--botao-hover);
+}
+
+footer {
+    background-color: var(--cor-principal);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+}
